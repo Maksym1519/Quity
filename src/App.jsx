@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route, Link, Switch } from "react-router-dom";
 import store from "./App/store";
 import Main from "./components/pages/Main/Main";
 import Navigation from "./Navigation";
+import Test from "./components/pages/Main/Test";
+import Form from "./components/pages/Form";
 //styles--------------------------------------------------------------------------------------------
 import "./fonts.scss";
 import "./style.scss";
@@ -20,7 +22,7 @@ const App = () => {
           <Link to="/Navigation">Navigation</Link>
         </nav>
       }
-      <Routes>
+       <Routes>
         <Route
           path="/Navigation"
           element={
@@ -34,6 +36,22 @@ const App = () => {
           element={
             <React.Suspense>
               <Main />
+            </React.Suspense>
+          }
+        ></Route>
+        <Route
+          path="/Test"
+          element={
+            <React.Suspense>
+              <Test />
+            </React.Suspense>
+          }
+        ></Route>
+        <Route
+          path="/Form"
+          element={
+            <React.Suspense>
+              <Form />
             </React.Suspense>
           }
         ></Route>

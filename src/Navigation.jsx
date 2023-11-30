@@ -7,8 +7,8 @@ import Main from "./components/pages/Main/Main";
     return (
          <nav class='navLinks__wrapper'>
             <div class='navLink'><Link to="/">Home</Link></div>
-            <div class='navLink'><Link to="/">Home</Link></div>
-            <div class='navLink'><Link to="/">Home</Link></div>
+            <div class='navLink'><Link to="/Test">Test</Link></div>
+            <div class='navLink'><Link to="/Form">Form</Link></div>
          </nav>
     )
 }

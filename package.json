@@ -54,7 +54,8 @@
     "styled-components": "^6.0.5",
     "swiper": "^10.2.0",
     "swiper-bundle": "^0.0.1-security",
-    "tls": "^0.0.1"
+    "tls": "^0.0.1",
+    "uuid": "^9.0.1"
   },
   "browser": {
     "fs": false,
