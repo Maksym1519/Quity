@@ -9,6 +9,7 @@ import Main from "./components/pages/Main/Main";
 import Navigation from "./Navigation";
 import Test from "./components/pages/Main/Test";
 import Form from "./components/pages/Form";
+import TodoItem from "./components/pages/Main/TodoItem";
 //styles--------------------------------------------------------------------------------------------
 import "./fonts.scss";
 import "./style.scss";
@@ -52,6 +53,14 @@ const App = () => {
           element={
             <React.Suspense>
               <Form />
+            </React.Suspense>
+          }
+        ></Route>
+        <Route
+          path="/TodoItem"
+          element={
+            <React.Suspense>
+              <TodoItem />
             </React.Suspense>
           }
         ></Route>
