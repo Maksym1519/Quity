@@ -16,10 +16,11 @@ import { setUserId } from "@/lib/features/order/orderSlice";
 
 
 const OrdersStorage = () => {
+  const [currentUserId, setCurentUserId]
+  const dataStorage = localStorage.getItem("id");
   if (typeof window !== 'undefined') {
-    const currentUserId = localStorage.getItem("id");
-    return currentUserId;
-  }
+   
+    }
   
  const dispatch = useAppDispatch();
   useEffect(() => {
