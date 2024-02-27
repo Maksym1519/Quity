@@ -66,7 +66,12 @@ const HeaderShop = () => {
   const [amountGoods, setAmountGoods] = useState();
   const [quantity, setQuantity] = useState();
   const bucketData = useAppSelector(bucketLengthInfo);
-  const dataStorage = localStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const dataStorage = localStorage.getItem("id");
+    return dataStorage
+  }
+  
+  
   const filteredBucket = bucketData.filter((item) => item.id === dataStorage);
 
   useEffect(() => {

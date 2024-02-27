@@ -102,7 +102,11 @@ const PersonalData = () => {
        
   
   //localsrorage----------------------------------------------
-  const dataStorage = localStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const dataStorage = localStorage.getItem("id");
+    return dataStorage;
+  }
+  
   //get-profile-id-----------------------------------------------
   const [matchingId, setMatchingId] = useState();
   async function getProfileId() {

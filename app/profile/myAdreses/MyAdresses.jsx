@@ -21,7 +21,12 @@ const MyAdresses = () => {
     setAddresses(updatedAddresses);
   };
   //localsrorage----------------------------------------------
-  const dataStorage = localStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const dataStorage = localStorage.getItem("id");
+    return dataStorage;
+  }
+  
+ 
   //get-id-from-redux---------------------------------------------------------
   const profileId = useAppSelector(selectRegistartionInfo)
   console.log(profileId)

@@ -56,9 +56,12 @@ const Popup = (props) => {
   let fullDate = day + "/" + month + "/" + year;
 
   //get-localstorage-id----------------------------------------------------------
-  const currentUserId = localStorage.getItem("id");
-
-  //random-number-----------------------------------------------------------------
+  if (typeof window !== 'undefined') {
+    const currentUserId = localStorage.getItem("id");
+    return currentUserId
+  }
+  
+   //random-number-----------------------------------------------------------------
   const [appNumber, setAppNumber] = useState();
   useEffect(() => {
     const randomNumber = Math.floor(Math.random() * 1000);

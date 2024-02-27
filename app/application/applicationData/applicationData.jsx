@@ -53,7 +53,12 @@ const ApplicationData = (props) => {
   };
 
   //get-localstorage-data----------------------------------------------
-  const currentUserId = localStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const currentUserId = localStorage.getItem("id");
+    return currentUserId
+  }
+  
+  
 
   //get-data-from-redux-------------------------------------------------
   const [newReduxArray, setNewReduxArray] = useState();

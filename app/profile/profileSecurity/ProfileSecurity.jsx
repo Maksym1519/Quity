@@ -6,7 +6,12 @@ import Image from "next/image";
 
 const ProfileSecurity = () => {
   //data-storage----------------------------------------------------------
-  const dataStorage = localStorage.getItem("id");
+  if (typeof window !== 'undefined') {
+    const dataStorage = localStorage.getItem("id");
+    return dataStorage;
+  }
+  
+  
   //get-clients----------------------------------------------------------
   const [id, setId] = useState();
   const [password, setPassword] = useState();

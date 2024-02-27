@@ -19,7 +19,10 @@ const Registration = () => {
   //localStorage-----------------------------------------------------
   const [id, setId] = useState("");
   useEffect(() => {
-    localStorage.setItem("id", id);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("id", id);
+    }
+    
   }, [id]);
   const dispatch = useAppDispatch();
   useEffect(() => {
